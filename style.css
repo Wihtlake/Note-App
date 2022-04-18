@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    font-weight: 100;
+}
+body{
+    background: linear-gradient(338deg, #f8f5ec,#f0ebd9,#decece,#866a88);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+.box__for--note{
+    width: 100%;
+    min-height: 900px;
+}
+.main__box--note{
+    border: 2px solid rgba(160, 145, 145, 0.555);
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-radius: 50px;
+    margin: 200px auto;
+    background: rgba(0, 0, 0, 0.527);
+    box-shadow: 0px 10px 70px 10px;
+    overflow: hidden;
+    
+}
+/* оформление заголовка */
+.header__note{
+    background: linear-gradient(10deg, #2acc73,#46df41da,#ffffff);
+    z-index: 3;
+    display: flex;
+    padding: 30px 50px ;
+    align-items: center;
+}
+
+.header__note--text{
+    margin-left: 20px;
+    color: white;
+    font-size: 30pt;    
+}
+.header__note--img{
+    width: 50px;
+}
+
+/* оформление заметок */
+.content__note{
+    min-height: 300px;
+    margin: 20px auto;
+    
+}
+.animation{
+    animation-name: a2;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+}
+
+.content__text__note{
+    animation-name: a1;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+
+
+    list-style: lower-alpha;
+    background: #2acc73;
+    background: linear-gradient(130deg, rgba(42,204,115,1) 0%, rgba(42,204,115,1) 19%, rgba(42, 204, 115, 0) 95%);
+    border-radius: 40px 0 0 40px ;
+    padding: 5px 0px;
+    margin: 10px auto;
+    padding-left: 30px;
+    font-size: 18pt;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+    word-break:keep-all;
+}
+
+.content__button{
+    padding: 20px 30px;
+    margin: 0;
+    float: right;
+    font-size: 20pt ;
+    border-radius: 40px;
+    border: transparent;
+    background: #2acc73;
+    transition: 0.2s box-shadow;
+    color: white;
+    min-width: 215px;
+
+
+}
+.content__button:hover{
+    box-shadow: 0px 0px 20px #ffffff;
+    cursor: pointer;
+
+
+}
+/* Оформление кнопки и поля ввода */
+.content__write{
+    z-index: 4;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.input_content{
+    width: 75%;
+    padding-left: 50px;
+    background: rgba(175, 172, 218, 0.329);
+    outline: none;
+    border-bottom: 2px solid white ;
+
+} 
+.input_content::placeholder{
+    color: rgba(255, 255, 255, 0.685);
+    
+}
+
+.button__content, .input_content{
+    border: transparent;
+    height: 70px;
+    border-radius: 40px;
+    font-size: 20pt;
+    color: white;
+}
+
+.button__content{
+    min-width: 215px;
+
+    width: 20%;
+    cursor: pointer;
+    background: #2acc73;
+    transition: 0.2s box-shadow;
+}
+.button__content:hover{
+    box-shadow: 0px 0px 20px #ffffff ;
+    background: #2acc73;
+}
+/* Анимация */
+@keyframes a1{
+    0%{
+        transform:translateY(20px);
+    }
+    100%{
+        transform:translateY(0px);
+
+    }
+}
+@keyframes a2{
+    0%{
+        transform:translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform:translateY(200px);
+        opacity: 0;
+    }
+}
+@media (max-width: 1200px) {
+    .main__box--note{
+        width: 90%;
+        margin: 100px auto;
+    }
+    .content__write{
+        flex-direction: column;
+        align-items: center;
+    }
+    .content__note{
+        padding: 5px 10px;
+    }
+    .content__text__note{
+        padding: 5px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .input_content{
+        padding: 0;
+        text-align: center;
+    }
+    .button__content, .input_content{
+        width: 80%;
+        margin-right: 0;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .content__button{
+        margin-top: 20px;
+        width: 100%;
+        padding: 8px 10px;
+        text-align: center;
+    }
+}
