@@ -124,6 +124,7 @@ body{
 .button__content, .input_content{
     border: transparent;
     height: 70px;
+    margin: 10px auto;
     border-radius: 40px;
     font-size: 20pt;
     color: white;
@@ -163,36 +164,56 @@ body{
 }
 @media (max-width: 1200px) {
     .main__box--note{
+        border-radius: 30px;
+        border: transparent;
+    }
+    .main__box--note{
         width: 90%;
         margin: 100px auto;
     }
     .content__write{
         flex-direction: column;
         align-items: center;
+        font-size: 1pt;
     }
     .content__note{
         padding: 5px 10px;
+        font-size: 10pt;
+
     }
     .content__text__note{
-        padding: 5px 10px;
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 5px;
         flex-direction: column;
         align-items: flex-start;
+        font-size: 14pt;
+        border-radius: 20px;
+        word-break: break-all;
+
     }
     .input_content{
         padding: 0;
         text-align: center;
+
     }
     .button__content, .input_content{
         width: 80%;
-        margin-right: 0;
+        margin: 0 auto;
         align-items: center;
         justify-content: center;
+        font-size: 14pt;
+        
         margin-top: 20px;
     }
     .content__button{
-        margin-top: 20px;
-        width: 100%;
+        margin-top: 30px;
+        width: 102%;
         padding: 8px 10px;
+        margin-left: -25px;
+        background: rgba(255, 255, 255, 0.377);
         text-align: center;
+        font-size: 14pt;
+
     }
 }
