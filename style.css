@@ -48,6 +48,7 @@ body{
 .content__note{
     min-height: 300px;
     margin: 20px auto;
+    position: relative;
     
 }
 .animation{
@@ -56,11 +57,17 @@ body{
     animation-fill-mode: forwards;
 }
 
+.water_name{
+    position: absolute;
+    font-size: 20pt;
+    color: rgba(255, 255, 255, 0.425);
+    padding-left: 60px;
+}
 .content__text__note{
     animation-name: a1;
     animation-duration: .2s;
     animation-fill-mode: forwards;
-
+    position: relative;
 
     list-style: lower-alpha;
     background: #2acc73;
